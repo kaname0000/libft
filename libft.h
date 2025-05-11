@@ -6,13 +6,14 @@
 /*   By: okaname <okaname@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 15:03:34 by okaname           #+#    #+#             */
-/*   Updated: 2024/11/04 22:46:45 by okaname          ###   ########.fr       */
+/*   Updated: 2025/04/08 22:47:10 by okaname          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include "get_next_line.h"
 # include <ctype.h>
 # include <limits.h>
 # include <stddef.h>
@@ -50,6 +51,7 @@ size_t				ft_strlcpy(char *dest, const char *src, size_t size);
 size_t				ft_strlen(const char *s);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
+int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strnstr(const char *str, const char *to_find,
 						size_t len);
 char				*ft_strrchr(const char *s, int c);
@@ -57,6 +59,7 @@ char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
+int					ft_get_longer_length(const char *s1, const char *s2);
 
 typedef struct s_list
 {

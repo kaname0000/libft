@@ -6,7 +6,7 @@
 #    By: okaname <okaname@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/01 20:14:46 by okaname           #+#    #+#              #
-#    Updated: 2024/11/05 21:23:20 by okaname          ###   ########.fr        #
+#    Updated: 2025/04/13 15:52:28 by okaname          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRCS =	ft_strlen.c \
 		ft_strrchr.c \
 		ft_strnstr.c \
 		ft_strncmp.c \
+		ft_strcmp.c \
 		ft_memset.c \
 		ft_bzero.c \
 		ft_memcpy.c \
@@ -49,9 +50,9 @@ SRCS =	ft_strlen.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
-		ft_putnbr_fd.c
+		ft_putnbr_fd.c\
 
-SRC_BONUS =	ft_lstnew.c \
+SRCS_BONUS =	ft_lstnew.c \
 		ft_lstadd_front.c \
 		ft_lstsize.c \
 		ft_lstlast.c \
@@ -61,8 +62,16 @@ SRC_BONUS =	ft_lstnew.c \
 		ft_lstiter.c \
 		ft_lstmap.c
 
+SRCS_EXTRA = ft_get_longer_length.c\
+				ft_strcmp.c \
+				get_next_line.c\
+				get_next_line_utils.c\
+
+
+
 OBJS = $(SRCS:.c=.o)
-OBJS_BONUS = $(SRC_BONUS:.c=.o)
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
+OBJS_EXTRA = $(SRCS_EXTRA:.c=.o)
 
 TARGET = $(NAME)
 BONUS_FLAG = .bonus_done
@@ -75,7 +84,7 @@ $(TARGET): $(OBJS)
 
 bonus:$(BONUS_FLAG)
 
-$(BONUS_FLAG):$(OBJS) $(OBJS_BONUS)
+$(BONUS_FLAG):$(OBJS) $(OBJS_BONUS) $(OBJS_EXTRA)
 	ar rcs $(TARGET) $^
 	touch $(BONUS_FLAG)
 
@@ -83,7 +92,7 @@ $(BONUS_FLAG):$(OBJS) $(OBJS_BONUS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS) $(OBJS_BONUS) $(BONUS_FLAG)
+	rm -f $(OBJS) $(OBJS_BONUS) $(OBJS_EXTRA) $(BONUS_FLAG)
 
 fclean: clean
 	rm -f $(TARGET)
