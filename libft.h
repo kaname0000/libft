@@ -6,7 +6,7 @@
 /*   By: okaname <okaname@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 15:03:34 by okaname           #+#    #+#             */
-/*   Updated: 2025/04/08 22:47:10 by okaname          ###   ########.fr       */
+/*   Updated: 2025/05/12 23:19:23 by okaname          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,11 @@ char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
+
 int					ft_get_longer_length(const char *s1, const char *s2);
+double				ft_atof(char *str);
+void				ft_free_array(char **array);
+double				ft_pow(double i, int j);
 
 typedef struct s_list
 {

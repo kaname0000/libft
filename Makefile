@@ -6,7 +6,7 @@
 #    By: okaname <okaname@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/01 20:14:46 by okaname           #+#    #+#              #
-#    Updated: 2025/04/13 15:52:28 by okaname          ###   ########.fr        #
+#    Updated: 2025/05/12 23:19:30 by okaname          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,9 @@ SRCS_EXTRA = ft_get_longer_length.c\
 				ft_strcmp.c \
 				get_next_line.c\
 				get_next_line_utils.c\
+				ft_atof.c\
+				ft_free_array.c\
+				ft_pow.c\
 
 
 
